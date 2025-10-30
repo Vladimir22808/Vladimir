@@ -1,0 +1,22 @@
+import telebot
+import os
+import random
+
+
+print(os.listdir('images'))
+
+bot = telebot.TeleBot("8395250814:AAEMygayP7-L6JQntBjCuF4vNBMJvcWZMGs")
+
+
+@bot.message_handler(commands=['start'])
+def send_welcome(message):
+    bot.reply_to(message, f'какая помощь нужна? {bot.get_me().first_name}!')
+
+    
+@bot.message_handler(commands=['что можно зделать из бытогого пластика?'])
+def send_mem(message):
+    img_name = random.choice(os.listdir('images'))
+    with open(f'images/{img_name}', 'rb') as f:  
+        bot.send_photo(message.chat.id, f) 
+
+bot.polling()
