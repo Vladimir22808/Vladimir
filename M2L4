@@ -1,0 +1,58 @@
+p {
+    font-size: 18px;
+    line-height: 1,5;
+    color: #6ae6eb;
+    margin: 15px 0;
+}
+h1 {
+    font-size: 36px;
+    color: #0044ff;
+    margin-bottom: 20px;
+}
+.ai-info {
+    font-style: italic;
+    color: #5900ff;
+    background: #a200ff;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.logo {
+    display:inline-block;
+    font-size: 50px;
+    font-weight: bold;
+    margin:auto;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+animation: color-change 3s infinite;
+
+@keyframes color-change {
+  0%   { color: blue; }
+  50%  { color: red; }
+  100% { color: blue; }
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+.btn:hover {
+    animation: pulse_effect 1s infinite;
+}
+@keyframes pulse_effect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+<iframe style = "width: 80%; height: 75vh; border-radius: 20px; display: block; margin: 0 auto; object-fit: contain; border: none; padding: 0;" title="Вставка" src="https://andreipabiarzhyn.github.io/animation/"></iframe" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
